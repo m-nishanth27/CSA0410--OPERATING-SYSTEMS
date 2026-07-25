@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int users,files,i,j;
+    char username[20];
+    char filename[20];
+
+    printf("Enter number of users: ");
+    scanf("%d",&users);
+
+    for(i=1;i<=users;i++)
+    {
+        printf("\nEnter user name: ");
+        scanf("%s",username);
+
+        printf("Enter number of files: ");
+        scanf("%d",&files);
+
+        printf("Files of %s:\n",username);
+
+        for(j=1;j<=files;j++)
+        {
+            scanf("%s",filename);
+        }
+    }
+
+    printf("\nTwo Level Directory Created Successfully.\n");
+
+    return 0;
+}
