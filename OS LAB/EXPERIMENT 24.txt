@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main() {
+    int fd;
+    char data[100];
+    int n;
+
+    fd = open("test.txt", O_CREAT | O_RDWR, 0644);
+
+    if(fd < 0) {
+        printf("File opening failed\n");
+        return 1;
+    }
+
+    printf("Enter data: ");
+    scanf(" %[^\n]", data);
+
+    write(fd, data, sizeof(data));
+
+    close(fd);
+
+    fd = open("test.txt", O_RDONLY);
+
+    n = read(fd, data, sizeof(data));
+
+    printf("\nFile contents: %s\n", data);
+
+    close(fd);
+
+    return 0;
+}
