@@ -1,0 +1,47 @@
+EXPERIMENT 34
+FILE ACCESS PERMISSIONS AND DIFFERENT TYPES OF USERS IN LINUX
+
+Aim:
+To illustrate the various file access permissions and different types of users in Linux.
+
+Commands:
+
+1. Create a file
+touch test.txt
+
+2. Display file permissions
+ls -l test.txt
+
+3. Give read, write and execute permission to owner,
+   read and execute permission to group and others
+chmod 755 test.txt
+
+4. Display changed permissions
+ls -l test.txt
+
+5. Give read and write permission to owner,
+   read permission to group and others
+chmod 644 test.txt
+
+6. Display changed permissions
+ls -l test.txt
+
+7. Display current user
+whoami
+
+8. Display user and group information
+id
+
+File Access Permissions:
+r - Read
+w - Write
+x - Execute
+
+Types of Users:
+1. Owner
+2. Group
+3. Others
+
+Result:
+Thus, the various file access permissions and different types of users
+in Linux were successfully illustrated.
